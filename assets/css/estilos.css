@@ -144,3 +144,14 @@ body{
 	font-weight: 300;
 	padding-top: 1.5rem;
 }
+
+/** MEDIA QUERIES **/
+@media(max-width: 765px){
+	.account-left{
+		display: none;
+	}
+
+	.account-right{
+		width: 100%;
+	}
+}
