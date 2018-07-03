@@ -13,8 +13,11 @@
 	<div class="signup-container">
 		
 		<div class="account-left">
-			<h1>cuenta izquierda</h1>
-		</div><!-- fin cuenta-izq -->
+			<div class="account-text">
+				<h1>Charlemos</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor temporibus fugiat incidunt at porro placeat sed nemo.</p>
+			</div><!-- fin account-text -->
+		</div><!-- fin account-left -->
 		
 		<div class="account-right">
 			<div class="form-area">

@@ -33,7 +33,19 @@ body{
 
 .account-left{
 	width: 70%;
-	background-color: #FF0000;
+	background-image: linear-gradient(to right bottom, rgba(40,180,133, .90) 50%, transparent 50%), url('../img/background-signup.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.account-text{
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5rem;
+	color: var(--color-white);
 }
 
 .account-right{
