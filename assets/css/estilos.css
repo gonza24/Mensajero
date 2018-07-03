@@ -7,6 +7,8 @@
 	--color-black: #000;
 	--color-white: #FFF;
 	--color-silver2: #54667a;
+	--color-silver3: #f1f1f4;
+	--color-silver4: #999999;
 }
 
 html{
@@ -246,6 +248,8 @@ body{
 	width: 100%;
 	height: 75vh;
 	padding: 2rem;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .left-message{
@@ -266,11 +270,12 @@ body{
 .sender-name{
 	font-weight: 500;
 	font-size: 1.1rem;
-	color: var(--color-silver2);
+	color: var(--color-silver4);
 }
 
 .date-time{
 	margin-left: 2rem;
+	color: var(--color-silver4);
 }
 
 .left-msg{
@@ -281,11 +286,52 @@ body{
 	border-top-right-radius: 0.5rem;
 	border-bottom-right-radius: 0.5rem;
 	border-bottom-left-radius: 0.5rem;
-	margin-top: 0.5rem;
+	margin-top: 0.3rem;
+	position: relative;
+	font-size: 1.1rem;
+}
+
+.left-msg::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -.7rem;
+	width: 0;
+	height: 0;
+	border-top: .7rem solid var(--color-green-light);
+	border-left: .7rem solid transparent;
 }
 
 .common-margin{
 	margin-top: 1.5rem;
+}
+
+.right-messages{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.right-msg-area{
+	width: 50%;
+	width: auto;
+}
+
+.right-time{
+	display: block;
+	text-align: right;
+}
+
+.right-msg{
+	padding: 1rem;
+	width: auto;
+	background: var(--color-silver3);
+	color: var(--color-white);
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+	margin-top: 0.3rem;
+	color: var(--color-black);
+	font-size: 1.1rem;
 }
 
 .sender-img{
