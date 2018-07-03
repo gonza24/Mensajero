@@ -25,7 +25,42 @@
 		</section><!-- fin sidebar -->
 		<section id="right-area">
 			<div class="messages">
-				MESSAGE
+				<div class="left-message common-margin">
+					<div class="sender-img-block">
+						<img src="assets/img/profile1.png" class="sender-img">
+					</div><!-- fin sender-img-block -->
+					<div class="left-msg-area">
+						<div class="user-name-date">
+							<span class="sender-name">
+								Pepe Argento
+							</span><!-- fin sender-name -->
+							<span class="date-time">
+								Hace 1 día
+							</span><!-- fin date-time -->
+						</div><!-- fin user-name-date -->
+						<div class="left-msg">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo pariatur deserunt animi culpa, dolorum doloremque veniam officiis dignissimos reiciendis deleniti ad quibusdam, tenetur odit labore est.</p>
+						</div><!-- fin left-msg -->
+					</div><!-- fin left-msg-area -->
+				</div><!-- fin left-message -->
+				<div class="left-message common-margin">
+					<div class="sender-img-block">
+						<img src="assets/img/profile1.png" class="sender-img">
+					</div><!-- fin sender-img-block -->
+					<div class="left-msg-area">
+						<div class="user-name-date">
+							<span class="sender-name">
+								Pepe Argento
+							</span><!-- fin sender-name -->
+							<span class="date-time">
+								Hace 1 día
+							</span><!-- fin date-time -->
+						</div><!-- fin user-name-date -->
+						<div class="left-msg">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo pariatur deserunt animi culpa, dolorum doloremque veniam officiis dignissimos reiciendis deleniti ad quibusdam, tenetur odit labore est.</p>
+						</div><!-- fin left-msg -->
+					</div><!-- fin left-msg-area -->
+				</div><!-- fin left-message -->
 			</div><!-- fin messages -->
 			<div class="chat-form">
 				FORM CHAT
