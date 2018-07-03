@@ -368,6 +368,18 @@ body{
 	height: 15vh;
 	background-color: black;
 }
+
+/** BARRA SCROLL PERSONALIZADA **/
+.messages::-webkit-scrollbar{
+	width: 1rem;
+	background-color: var(--color-silver3);
+}
+
+.messages::-webkit-scrollbar-thumb{
+	background-color: #888;
+	border-radius: 1rem;
+}
+
 /** MEDIA QUERIES **/
 @media(max-width: 765px){
 	.account-left{
