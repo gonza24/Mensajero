@@ -261,6 +261,29 @@ body{
 	width: 4rem;
 	height: 4rem;
 	border-radius: 50%;
+	position: relative;
+}
+
+.online-icon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1rem;
+	height: 1rem;
+	background-color: var(--color-green-dark);
+	display: block;
+	border-radius: 50%;
+}
+
+.offline-icon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1rem;
+	height: 1rem;
+	background-color: red;
+	display: block;
+	border-radius: 50%;
 }
 
 .left-msg-area{

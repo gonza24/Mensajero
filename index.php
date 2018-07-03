@@ -28,6 +28,9 @@
 				<div class="left-message common-margin">
 					<div class="sender-img-block">
 						<img src="assets/img/profile1.png" class="sender-img">
+						<span class="online-icon">
+							
+						</span>
 					</div><!-- fin sender-img-block -->
 					<div class="left-msg-area">
 						<div class="user-name-date">
@@ -46,6 +49,7 @@
 				<div class="left-message common-margin">
 					<div class="sender-img-block">
 						<img src="assets/img/profile1.png" class="sender-img">
+						<span class="offline-icon"></span>
 					</div><!-- fin sender-img-block -->
 					<div class="left-msg-area">
 						<div class="user-name-date">
