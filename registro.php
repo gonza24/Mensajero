@@ -12,11 +12,11 @@
 	
 	<div class="signup-container">
 		
-		<div class="acount-left">
+		<div class="account-left">
 			<h1>cuenta izquierda</h1>
 		</div><!-- fin cuenta-izq -->
 		
-		<div class="acount-right">
+		<div class="account-right">
 			<div class="form-area">
 				<form method="POST" action="">
 					<div class="group">
@@ -33,7 +33,7 @@
 						<input type="file" name="img" class="file" id="file">
 					</div><!-- fin group -->
 					<div class="group">
-						<input type="submit" name="signup" class="btn signup-btn" placeholder="Crear Cuenta">
+						<input type="submit" name="signup" class="btn account-btn" value="Crear Cuenta">
 					</div><!-- fin group -->
 				</form>
 			</div><!-- fin formulario -->

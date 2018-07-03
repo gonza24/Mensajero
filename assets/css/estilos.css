@@ -4,6 +4,8 @@
 	--color-green-light: #7ed56f;
 	--color-green-dark: #28b485;
 	--color-silver: #e4e7ea;
+	--color-black: #000;
+	--color-white: #FFF;
 }
 
 html{
@@ -29,12 +31,12 @@ body{
 	height: 100vh;
 }
 
-.acount-left{
+.account-left{
 	width: 70%;
 	background-color: #FF0000;
 }
 
-.acount-right{
+.account-right{
 	width: 30%;
 	position: relative;
 }
@@ -77,4 +79,23 @@ body{
 	border: 1px solid var(--color-silver);
 	border-radius: 3px;
 	font-size: 1.2rem;
+}
+
+.file-label:hover{
+	cursor: pointer;
+}
+
+.btn{
+	display: block;
+	padding: 1.2rem .9rem;
+	font-size: 1.5rem;
+	border-radius: 3rem;
+	text-transform: uppercase;
+	border: 0;
+	color: var(--color-white);
+}
+
+.account-btn{
+	width: 100%;
+	background: linear-gradient(to right, var(--color-green-light), var(--color-green-dark));
 }
