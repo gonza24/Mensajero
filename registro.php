@@ -7,7 +7,7 @@ if(isset($_POST['signup'])){
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$img_name = $_FILES['img']['name'];
-	$img_temp = $_FILES['img']['tmp_name'];
+	$img_tmp = $_FILES['img']['tmp_name'];
 	$img_path = "assets/img/";
 	$extensions = ['png','jpg','jpeg'];
 	$img_ext = explode('.', $img_name);
@@ -56,6 +56,16 @@ if(isset($_POST['signup'])){
 	}else if(!in_array($img_extension,$extensions)){
 		$image_error = "Extensión de imagen inválida";
 		$photo_status = "";
+	}
+
+	/** INSERTAR DATOS EN LA BD **/
+	if(!empty($name_status) && !empty($email_status) && !empty($password_status) && !empty($photo_status)){
+
+		move_uploaded_file($img_tmp, "$img_path/$img_name");
+		$status = 0;
+		if($obj->normal_query("INSERT INTO users (name,email,password,image,status) VALUES(?,?,?,?,?)", [$full_name, $email,password_hash($password, PASSWORD_DEFAULT), $img_name,$status])){
+			echo "Exitoso!";
+		}
 	}
 }
 
