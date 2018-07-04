@@ -24,14 +24,22 @@ $name_status = $email_status = $password_status = $photo_status = 1;
 		}else{
 			if($obj->normal_query("SELECT email FROM users WHERE email = ?", array($email))){
 				if($obj->Count_Rows() == 0){
-
+					//se registra
 				}else{
 					$email_error = "El email ya existe";
 					$email_status = "";
 				}
 			}
 		}
-	}	
+	}
+
+	if(empty($password)){
+		$password_error = "La contraseña es requerido";
+		$password_status = "";
+	}else if(strlen($password) < 5 ){
+ 		$password_error = "La contraseña es corta";
+		$password_status = "";
+	}
 }
 
 ?>

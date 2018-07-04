@@ -23,6 +23,11 @@
 		
 		<div class="group">
 			<input type="password" name="password" class="control" placeholder="Crea una contraseña">
+			<div class="name-error error">
+				<?php if(isset($password_error)): ?>
+					<?php echo $password_error; ?>
+				<?php endif; ?>
+		</div>
 		</div><!-- fin group -->
 		<div class="group">
 			<label for="file" id="file-label">
