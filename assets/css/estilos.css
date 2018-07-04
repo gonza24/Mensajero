@@ -335,14 +335,12 @@ body{
 .right-messages{
 	display: flex;
 	justify-content: flex-end;
-	max-width: 50%;
-	width: auto;
 }
 
-/*.right-msg-area{
+.right-msg-area{
 	width: 50%;
 	width: auto;
-}*/
+}
 
 .right-time{
 	display: block;
@@ -512,11 +510,22 @@ body{
 		width: auto;
 	}
 
+	.right-msg-area{
+		max-width: 90%;
+		width: auto;
+	}
+
 	.messages{
 		height: 70vh;
 	}
 
 	.chat-form{
 		height: 10vh;
+	}
+
+	::-webkit-input-placeholder{
+		font-size: .9rem;
+		font-family: sans-serif;
+		color: var(--color-black);
 	}
 }
