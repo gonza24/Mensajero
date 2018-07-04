@@ -15,7 +15,7 @@ class base_class extends Db{
 		}
 	}
 
-	public function rount_rows(){
+	public function count_rows(){
 		return $this->Query->rowCount();
 	}
 
