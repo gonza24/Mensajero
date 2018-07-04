@@ -7,7 +7,6 @@
 	<?php include 'components/css.php'; ?>
 </head>
 <body>
-	
 	<div class="signup-container">
 		
 		<div class="account-left">
