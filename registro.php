@@ -3,9 +3,9 @@
 include "init.php";
 $obj = new base_class();
 if(isset($_POST['signup'])){
-	$full_name = $_POST['full_name'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$full_name = $obj->security($_POST['full_name']);
+	$email = $obj->security($_POST['email']);
+	$password = $obj->security($_POST['password']);
 	$img_name = $_FILES['img']['name'];
 	$img_tmp = $_FILES['img']['tmp_name'];
 	$img_path = "assets/img/";

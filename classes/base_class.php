@@ -19,4 +19,12 @@ class base_class extends Db{
 		return $this->Query->rowCount();
 	}
 
+	public function fetch_all(){
+		return $this->Query->fetchAll(PDO::FETCH_OBJ);
+	}
+
+	public function security($data){
+		return strip_tags($data);
+	}
+
 }
