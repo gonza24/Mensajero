@@ -5,7 +5,7 @@
 			<h2 class="form-heading">Crea una cuenta</h2>
 		</div><!--fin group -->
 		<div class="group">
-			<input type="text" name="full_name" class="control" placeholder="Ingresa Nombre Completo">
+			<input type="text" name="full_name" class="control" placeholder="Ingresa Nombre Completo" value="<?php if(isset($full_name)): echo $full_name; endif; ?>"">
 			<div class="name-error error">
 				<?php if(isset($name_error)): ?>
 					<?php echo $name_error; ?>
@@ -13,7 +13,7 @@
 			</div>
 		</div><!-- fin group -->
 		<div class="group">
-			<input type="email" name="email" class="control" placeholder="Ingresa Email">
+			<input type="email" name="email" class="control" placeholder="Ingresa Email" value="<?php if(isset($email)): echo $email; endif; ?>">
 		<div class="name-error error">
 			<?php if(isset($email_error)): ?>
 				<?php echo $email_error; ?>
@@ -22,7 +22,7 @@
 		</div><!-- fin group -->
 		
 		<div class="group">
-			<input type="password" name="password" class="control" placeholder="Crea una contraseña">
+			<input type="password" name="password" class="control" placeholder="Crea una contraseña" value="<?php if(isset($password)): echo $password; endif; ?>">
 			<div class="name-error error">
 				<?php if(isset($password_error)): ?>
 					<?php echo $password_error; ?>
