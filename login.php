@@ -1,4 +1,48 @@
-<?php include 'init.php'; ?>
+<?php include "init.php"; ?>
+
+<?php 
+	$obj = new base_class();
+
+	if (isset($_POST['login'])) {
+		$email = $obj->security($_POST['email']);
+		$password = $obj->security($_POST['password']);
+		
+		$email_status = $password_status = 1;
+
+		if(empty($email)){
+			$email_error = "El Email es requerido";
+			$email_status = "";
+		}
+
+		if(empty($password)){
+			$password_error = "La contraseña es requerida";
+			$password_status = "";
+		}
+
+		if(!empty($email_status) && !empty($password_status)){
+			if($obj->normal_query("SELECT * FROM users WHERE email = ?", [$email])){
+				if($obj->count_rows() == 0){
+					$email_error = "El Email ingresado es incorrecto";
+				}else{
+					$row = $obj->single_result();
+					$db_email = $row->email;
+					$db_password = $row->password;
+					$user_id = $row->id;
+					$user_name = $row->name;
+
+					if(password_verify($password, $db_password)){
+						$obj->create_session("user_name", $user_name);
+						$obj->create_session("user_id", $user_id);
+						header("location:index.php");
+					}else{
+						$password_error = "Ingresa la contraseña correcta";
+					}
+				}
+			}
+		}
+	}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

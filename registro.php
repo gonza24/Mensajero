@@ -30,8 +30,8 @@ if(isset($_POST['signup'])){
 			$email_error = "El formato del email es invalido";
 		}else{
 			if($obj->normal_query("SELECT email FROM users WHERE email = ?", array($email))){
-				if($obj->Count_Rows() == 0){
-					//se registra
+				if($obj->count_rows() == 0){
+					
 				}else{
 					$email_error = "El email ya existe";
 					$email_status = "";

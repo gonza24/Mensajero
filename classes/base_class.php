@@ -15,7 +15,7 @@ class base_class extends Db{
 		}
 	}
 
-	public function Count_Rows(){
+	public function rount_rows(){
 		return $this->Query->rowCount();
 	}
 
@@ -29,6 +29,9 @@ class base_class extends Db{
 
 	public function create_session($session_name, $session_value){
 		$_SESSION[$session_name] = $session_value;
+	}
 
+	public function single_result(){
+		return $this->Query->fetch(PDO::FETCH_OBJ);
 	}
 }

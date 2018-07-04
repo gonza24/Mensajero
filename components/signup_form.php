@@ -5,7 +5,7 @@
 			<h2 class="form-heading">Crea una cuenta</h2>
 		</div><!--fin group -->
 		<div class="group">
-			<input type="text" name="full_name" class="control" placeholder="Ingresa Nombre Completo" value="<?php if(isset($full_name)): echo $full_name; endif; ?>"">
+			<input type="text" name="full_name" class="control" placeholder="Ingresa Nombre Completo" value="<?php if(isset($full_name)): echo $full_name; endif; ?>">
 			<div class="name-error error">
 				<?php if(isset($name_error)): ?>
 					<?php echo $name_error; ?>
