@@ -443,6 +443,14 @@ body{
 	margin-left: 1rem;
 }
 
+.form-section{
+	padding: 3rem;
+}
+
+.form-grid{
+	width: 35%;
+}
+
 /** MEDIA QUERIES **/
 @media(max-width: 765px){
 	.account-left{
