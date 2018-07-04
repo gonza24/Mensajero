@@ -8,13 +8,20 @@ if(isset($_POST['signup'])){
 	$password = $_POST['password'];
 	$img_name = $_FILES['img']['name'];
 	$img_temp = $_FILES['img']['tmp_name'];
-$name_status = $email_status = $password_status = $photo_status = 1;
+	$img_path = "assets/img/";
+	$extensions = ['png','jpg','jpeg'];
+	$img_ext = explode('.', $img_name);
+	$img_extension = end($img_ext);
 
+	$name_status = $email_status = $password_status = $photo_status = 1;
+
+	/** VALIDACION DE NOMBRE **/
 	if(empty($full_name)){
 		$name_error = "El nombre es requerido";
 		$name_status = "";
 	}
 
+	/** VALIDACION DE EMAIL **/
 	if(empty($email)){
 		$email_error = "El email es requerido";
 		$email_status = "";
@@ -33,12 +40,22 @@ $name_status = $email_status = $password_status = $photo_status = 1;
 		}
 	}
 
+	/** VALIDACION DE PASSWORD **/
 	if(empty($password)){
 		$password_error = "La contraseña es requerido";
 		$password_status = "";
 	}else if(strlen($password) < 5 ){
  		$password_error = "La contraseña es corta";
 		$password_status = "";
+	}
+
+	/** VALIDACION DE IMAGENES **/
+	if(empty($img_name)){
+		$image_error = "La imagen es requerida";
+		$photo_status = "";
+	}else if(!in_array($img_extension,$extensions)){
+		$image_error = "Extensión de imagen inválida";
+		$photo_status = "";
 	}
 }
 

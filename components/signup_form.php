@@ -27,7 +27,7 @@
 				<?php if(isset($password_error)): ?>
 					<?php echo $password_error; ?>
 				<?php endif; ?>
-		</div>
+			</div>
 		</div><!-- fin group -->
 		<div class="group">
 			<label for="file" id="file-label">
@@ -35,6 +35,11 @@
 				Elegí una imagen
 			</label>
 			<input type="file" name="img" class="file" id="file">
+			<div class="name-error error">
+				<?php if(isset($image_error)): ?>
+					<?php echo $image_error; ?>
+				<?php endif; ?>
+			</div>
 		</div><!-- fin group -->
 		<div class="group">
 			<input type="submit" name="signup" class="btn account-btn" value="Crear Cuenta">
