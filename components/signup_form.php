@@ -14,7 +14,13 @@
 		</div><!-- fin group -->
 		<div class="group">
 			<input type="email" name="email" class="control" placeholder="Ingresa Email">
+		<div class="name-error error">
+			<?php if(isset($email_error)): ?>
+				<?php echo $email_error; ?>
+			<?php endif; ?>
+		</div>
 		</div><!-- fin group -->
+		
 		<div class="group">
 			<input type="password" name="password" class="control" placeholder="Crea una contraseña">
 		</div><!-- fin group -->

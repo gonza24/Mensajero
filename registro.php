@@ -1,17 +1,37 @@
 <?php  
 
 include "init.php";
+$obj = new base_class();
 if(isset($_POST['signup'])){
 	$full_name = $_POST['full_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$img_name = $_FILES['img']['name'];
 	$img_temp = $_FILES['img']['tmp_name'];
+$name_status = $email_status = $password_status = $photo_status = 1;
 
 	if(empty($full_name)){
 		$name_error = "El nombre es requerido";
 		$name_status = "";
 	}
+
+	if(empty($email)){
+		$email_error = "El email es requerido";
+		$email_status = "";
+	}else {
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+			$email_error = "El formato del email es invalido";
+		}else{
+			if($obj->normal_query("SELECT email FROM users WHERE email = ?", array($email))){
+				if($obj->Count_Rows() == 0){
+
+				}else{
+					$email_error = "El email ya existe";
+					$email_status = "";
+				}
+			}
+		}
+	}	
 }
 
 ?>
@@ -35,7 +55,7 @@ if(isset($_POST['signup'])){
 		</div><!-- fin account-left -->
 
 		<div class="account-right">
-			<?php include 'components/signup.php' ?>
+			<?php include 'components/signup_form.php' ?>
 		</div><!-- fin cuenta-derecha -->
 	</div><!-- fin registro-container -->
 
