@@ -151,7 +151,29 @@
 						<input type="file" id="upload-files" class="files-upload">
 					</div><!-- fin form-input -->
 				</div><!-- fin chat-container -->
-			</div>
+			</div><!-- fin chat-form -->
+
+			<div class="emoji">
+				<img src="assets/emojis/1.png"class="emoji-same">
+				<img src="assets/emojis/2.png"class="emoji-same">
+				<img src="assets/emojis/3.png"class="emoji-same">
+				<img src="assets/emojis/4.png"class="emoji-same">
+				<img src="assets/emojis/5.png"class="emoji-same">
+				<img src="assets/emojis/6.png"class="emoji-same">
+				<img src="assets/emojis/7.png"class="emoji-same">
+				<img src="assets/emojis/8.png"class="emoji-same">
+				<img src="assets/emojis/9.png"class="emoji-same">
+				<img src="assets/emojis/10.png"class="emoji-same">
+				<img src="assets/emojis/11.png"class="emoji-same">
+				<img src="assets/emojis/12.png"class="emoji-same">
+				<img src="assets/emojis/13.png"class="emoji-same">
+				<img src="assets/emojis/14.png"class="emoji-same">
+				<img src="assets/emojis/15.png"class="emoji-same">
+				<img src="assets/emojis/16.png"class="emoji-same">
+				<img src="assets/emojis/17.png"class="emoji-same">
+				<img src="assets/emojis/18.png"class="emoji-same">
+
+			</div><!-- fin emoji -->
 		</section><!-- fin right-area -->
 	</div><!-- fin chat-container -->
 
