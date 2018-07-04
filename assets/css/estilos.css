@@ -528,4 +528,8 @@ body{
 		font-family: sans-serif;
 		color: var(--color-black);
 	}
+
+	.form-grid{
+		width: 70%;
+	}
 }
