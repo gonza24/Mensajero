@@ -421,6 +421,14 @@ body{
 	letter-spacing: 2px;
 }
 
+/**  ERRORES DE FORMULARIO **/
+.error{
+	color: red;
+	text-align: left;
+	font-size: 1.2rem;
+	margin-top: 5px;
+}
+
 
 /** BARRA SCROLL PERSONALIZADA **/
 .messages::-webkit-scrollbar{

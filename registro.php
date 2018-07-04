@@ -1,8 +1,18 @@
 <?php  
 
 include "init.php";
+if(isset($_POST['signup'])){
+	$full_name = $_POST['full_name'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$img_name = $_FILES['img']['name'];
+	$img_temp = $_FILES['img']['tmp_name'];
 
-$db = new Db;
+	if(empty($full_name)){
+		$name_error = "El nombre es requerido";
+		$name_status = "";
+	}
+}
 
 ?>
 
