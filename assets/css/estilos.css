@@ -421,15 +421,6 @@ body{
 	letter-spacing: 2px;
 }
 
-/**  ERRORES DE FORMULARIO **/
-.error{
-	color: red;
-	text-align: left;
-	font-size: 1.2rem;
-	margin-top: 5px;
-}
-
-
 /** BARRA SCROLL PERSONALIZADA **/
 .messages::-webkit-scrollbar{
 	width: 1rem;
@@ -479,6 +470,30 @@ body{
 
 .bars{
 	display: none;
+}
+
+/**  ERRORES DE FORMULARIO **/
+.error{
+	color: red;
+	text-align: left;
+	font-size: 1.2rem;
+	margin-top: 5px;
+}
+
+/**  ALERTAS **/
+.alert{
+	width: 100%;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	border-radius: 4px;
+}
+
+.alert-success{
+	background-color: var(--color-green);
+	color: var(--color-white);
+	margin-bottom: 1.5rem;
+	font-size:1.3rem;
+	text-align: center;
 }
 
 /** MEDIA QUERIES **/

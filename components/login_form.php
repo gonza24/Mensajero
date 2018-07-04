@@ -1,4 +1,12 @@
 <div class="form-area">
+
+	<?php if(isset($_SESSION["account_success"])): ?>
+			<div class="alert alert-success">
+				 <?php echo $_SESSION["account_success"]; ?>
+			</div><!-- fin alert-success -->
+		<?php endif; ?>
+		<?php unset($_SESSION["account_success"]); ?>
+
 	<form method="POST" action="">
 		<div class="group">
 			<h2 class="form-heading">Login</h2>

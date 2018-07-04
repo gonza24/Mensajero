@@ -27,4 +27,8 @@ class base_class extends Db{
 		return strip_tags($data);
 	}
 
+	public function create_session($session_name, $session_value){
+		$_SESSION[$session_name] = $session_value;
+
+	}
 }
