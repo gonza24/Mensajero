@@ -154,6 +154,7 @@ body{
 	height: 10vh;
 	background: -webkit-linear-gradient(left, var(--color-green-light), var(--color-green-dark));
 	box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.2);
+	position: relative;
 }
 
 .chat-container{
@@ -334,12 +335,14 @@ body{
 .right-messages{
 	display: flex;
 	justify-content: flex-end;
-}
-
-.right-msg-area{
-	width: 50%;
+	max-width: 50%;
 	width: auto;
 }
+
+/*.right-msg-area{
+	width: 50%;
+	width: auto;
+}*/
 
 .right-time{
 	display: block;
@@ -451,6 +454,19 @@ body{
 	width: 35%;
 }
 
+.custom-bars{
+	float: right;
+	font-size: 1.8rem;
+	color: var(--color-white);
+	position: absolute;
+	right: 3rem;
+	top: 33%;
+}
+
+.bars{
+	display: none;
+}
+
 /** MEDIA QUERIES **/
 @media(max-width: 765px){
 	.account-left{
@@ -459,5 +475,44 @@ body{
 
 	.account-right{
 		width: 100%;
+	}
+
+	.chat-container{
+		flex-wrap: wrap;
+	}
+
+	#sidebar{
+		width: 100%;
+		display: none;
+	}
+
+	#sidebar::before{
+		width: 30%;
+	}
+
+	.bars{
+		display: block;
+	}
+
+	#right-area{
+		width: 100%;
+	}
+
+	.left-message{
+		max-width: 100%;
+		width: auto;
+	}
+	
+	.right-messages{
+		min-width: 100%;
+		width: auto;
+	}
+
+	.messages{
+		height: 70vh;
+	}
+
+	.chat-form{
+		height: 10vh;
 	}
 }
