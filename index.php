@@ -2,7 +2,7 @@
 	include 'init.php';
 ?>
 
-<?php if(!isset($_SESSION["user_id"])): ?>
+<?php if(!isset($_SESSION["user_id"])): ?>	
 	<?php header("location:login.php"); ?>
 <?php endif; ?>
 
