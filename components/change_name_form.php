@@ -5,11 +5,11 @@
 				<h2 class="form-heading">Cambiar Nombre</h2>
 			</div><!--fin group -->
 			<div class="group">
-				<input type="text" name="nombre_usuario" class="control" placeholder="Nombre">
+				<input type="text" name="user_name" class="control" placeholder="Nombre" value="<?php 	echo $_SESSION['user_name'] ?>">
 			</div><!-- fin group -->
 
 			<div class="group">
-				<input type="submit" name="cambiar_nombre" class="btn account-btn" value="Guardar cambios">
+				<input type="submit" name="change_name" class="btn account-btn" value="Guardar cambios">
 			</div><!-- fin group -->
 		</form>
 	</div><!-- fin form-grid -->

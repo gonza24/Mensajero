@@ -29,6 +29,19 @@
 	<?php endif; ?>
 	<?php unset($_SESSION['password_updated']) ?>
 
+	<?php if(isset($_SESSION['name_updated'])): ?>
+		<div class="flash success-flash">
+			<span class="remove">&times;</span>
+			<div class="flash-heading">
+				<h3><span class="checked">&#10004;</span>Exito: Tu lo has hecho!</h3>
+			</div><!-- fin flash-heading -->
+			<div class="flash-body">
+				<p><?php echo $_SESSION['name_updated']; ?></p>
+			</div><!-- fin flash-body -->
+		</div><!-- fin flash -->
+	<?php endif; ?>
+	<?php unset($_SESSION['name_updated']) ?>
+
 	
 
 	<!-- <div class="flash error-flash">

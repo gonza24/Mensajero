@@ -1,3 +1,26 @@
+<?php include 'init.php' ?>
+<?php 
+	$obj = new base_class;
+
+	if(isset($_POST['change_name'])){
+		$user_name = $obj->security($_POST['user_name']);
+		$user_id = $_SESSION['user_id'];
+		if(empty($user_name)){
+			$error_user_name = "El nombre es requerido";
+		}
+		else{
+			if($obj->normal_query("UPDATE users SET name = ? WHERE id = ?", [$user_name, $user_id])){
+				$obj->create_session("user_name", $user_name);
+				$obj->create_session("name_updated", "Tu nombre se actualizó exitosamente!");
+				header("location:index.php");
+			}
+		}
+	}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

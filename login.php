@@ -29,10 +29,13 @@
 					$db_password = $row->password;
 					$user_id = $row->id;
 					$user_name = $row->name;
+					$user_image = $row->image;
 
 					if(password_verify($password, $db_password)){
 						$obj->create_session("user_name", $user_name);
 						$obj->create_session("user_id", $user_id);
+						$obj->create_session("user_image", $user_image);
+
 						header("location:index.php");
 					}else{
 						$password_error = "Ingresa la contraseña correcta";
