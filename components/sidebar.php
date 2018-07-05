@@ -4,6 +4,7 @@
 		<li><a href="index.php"><?php echo ucwords($_SESSION["user_name"]); ?> <span class="cool-hover"></span></a></li>
 		<li><a href="change_name.php">Cambiar Nombre <span class="cool-hover"></span></a></li>
 		<li><a href="change_password.php">Cambiar Contraseña <span class="cool-hover"></span></a></li>
+		<li><a href="change_image.php">Cambiar Foto <span class="cool-hover"></span></a></li>
 		<li><a href="#">110 Usuarios en Linea <span class="cool-hover"></span></a></li>
 		<li><a href="logout.php">Salir<span class="cool-hover"></span></a></li>
 	</ul>

@@ -16,6 +16,7 @@
 </head>
 <body>
 
+<!-------------MENSAJE FLASH CAMBIO DE CONTRASEÑA------------>
 	<?php if(isset($_SESSION['password_updated'])): ?>
 		<div class="flash success-flash">
 			<span class="remove">&times;</span>
@@ -27,8 +28,10 @@
 			</div><!-- fin flash-body -->
 		</div><!-- fin flash -->
 	<?php endif; ?>
-	<?php unset($_SESSION['password_updated']) ?>
+	<?php unset($_SESSION['password_updated']); ?>
 
+	
+<!--------------MENSAJE FLASH CAMBIO DE NOMBRE--------------->
 	<?php if(isset($_SESSION['name_updated'])): ?>
 		<div class="flash success-flash">
 			<span class="remove">&times;</span>
@@ -40,9 +43,21 @@
 			</div><!-- fin flash-body -->
 		</div><!-- fin flash -->
 	<?php endif; ?>
-	<?php unset($_SESSION['name_updated']) ?>
+	<?php unset($_SESSION['name_updated']); ?>
 
-	
+<!--------------MENSAJE FLASH CAMBIO DE FOTO------------>
+	<?php if(isset($_SESSION['image_updated'])): ?>
+		<div class="flash success-flash">
+			<span class="remove">&times;</span>
+			<div class="flash-heading">
+				<h3><span class="checked">&#10004;</span>Éxito!</h3>
+			</div><!-- fin flash-heading -->
+			<div class="flash-body">
+				<p><?php echo $_SESSION['image_updated']; ?></p>
+			</div><!-- fin flash-body -->
+		</div><!-- fin flash -->
+	<?php endif; ?>
+	<?php unset($_SESSION['image_updated']); ?>
 
 	<!-- <div class="flash error-flash">
 		<span class="remove">&times;</span>
