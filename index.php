@@ -15,6 +15,27 @@
 	<?php include 'components/css.php'; ?>
 </head>
 <body>
+
+	<div class="flash success-flash">
+		<span class="remove">&times;</span>
+		<div class="flash-heading">
+			 <h3><span class="checked">&#10004;</span>Exito: Tu lo has hecho!</h3>
+		</div><!-- fin flash-heading -->
+		<div class="flash-body">
+			<p>Tu contraseña esta actualizada!</p>
+		</div><!-- fin flash-body -->
+	</div><!-- fin flash -->
+
+	<div class="flash error-flash">
+		<span class="remove">&times;</span>
+		<div class="flash-heading">
+			 <h3><span class="cross">&#x2715;</span>Error! Se ha productido un error!</h3>
+		</div><!-- fin flash-heading -->
+		<div class="flash-body">
+			<p>Primero necesitas iniciar sesión!</p>
+		</div><!-- fin flash-body -->
+	</div><!-- fin flash -->
+
 	<?php include 'components/nav.php'; ?>
 
 	<div class="chat-container">
