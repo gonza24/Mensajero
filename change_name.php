@@ -12,7 +12,7 @@
 	<div class="chat-container">
 		<?php include 'components/sidebar.php'; ?>
 		<section id="right-area">
-			<?php include 'components/change_name.php'; ?>
+			<?php include 'components/change_name_form.php'; ?>
 		</section><!-- fin right-area -->
 	</div><!-- fin chat-container -->
 
