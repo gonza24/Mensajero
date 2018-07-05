@@ -16,25 +16,30 @@
 </head>
 <body>
 
-	<div class="flash success-flash">
-		<span class="remove">&times;</span>
-		<div class="flash-heading">
-			 <h3><span class="checked">&#10004;</span>Exito: Tu lo has hecho!</h3>
-		</div><!-- fin flash-heading -->
-		<div class="flash-body">
-			<p>Tu contraseña esta actualizada!</p>
-		</div><!-- fin flash-body -->
-	</div><!-- fin flash -->
+	<?php if(isset($_SESSION['password_updated'])): ?>
+		<div class="flash success-flash">
+			<span class="remove">&times;</span>
+			<div class="flash-heading">
+				<h3><span class="checked">&#10004;</span>Exito: Tu lo has hecho!</h3>
+			</div><!-- fin flash-heading -->
+			<div class="flash-body">
+				<p><?php echo $_SESSION['password_updated']; ?></p>
+			</div><!-- fin flash-body -->
+		</div><!-- fin flash -->
+	<?php endif; ?>
+	<?php unset($_SESSION['password_updated']) ?>
 
-	<div class="flash error-flash">
+	
+
+	<!-- <div class="flash error-flash">
 		<span class="remove">&times;</span>
 		<div class="flash-heading">
 			 <h3><span class="cross">&#x2715;</span>Error! Se ha productido un error!</h3>
-		</div><!-- fin flash-heading -->
+		</div>
 		<div class="flash-body">
 			<p>Primero necesitas iniciar sesión!</p>
-		</div><!-- fin flash-body -->
-	</div><!-- fin flash -->
+		</div>
+	</div> -->
 
 	<?php include 'components/nav.php'; ?>
 
