@@ -2,9 +2,7 @@
 	include 'init.php';
 ?>
 
-<?php if(!isset($_SESSION["user_id"])): ?>	
-	<?php header("location:login.php"); ?>
-<?php endif; ?>
+<?php include 'security.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,16 +56,6 @@
 		</div><!-- fin flash -->
 	<?php endif; ?>
 	<?php unset($_SESSION['image_updated']); ?>
-
-	<!-- <div class="flash error-flash">
-		<span class="remove">&times;</span>
-		<div class="flash-heading">
-			 <h3><span class="cross">&#x2715;</span>Error! Se ha productido un error!</h3>
-		</div>
-		<div class="flash-body">
-			<p>Primero necesitas iniciar sesión!</p>
-		</div>
-	</div> -->
 
 	<?php include 'components/nav.php'; ?>
 
