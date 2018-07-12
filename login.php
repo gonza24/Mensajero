@@ -32,6 +32,8 @@
 					$user_image = $row->image;
 
 					if(password_verify($password, $db_password)){
+						$status = 1;
+						$obj->normal_query("UPDATE users SET status = ? WHERE id = ?", [$status,$user_id]);
 						$obj->create_session("user_name", $user_name);
 						$obj->create_session("user_id", $user_id);
 						$obj->create_session("user_image", $user_image);
