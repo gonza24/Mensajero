@@ -16,7 +16,7 @@ if(isset($_FILES['send_file']['name'])){
 		$user_id = $_SESSION['user_id'];
 		move_uploaded_file($tmp_name, "$store_files/$file_name");
 		if($obj->normal_query("INSERT INTO messages(message, msg_type, user_id) VALUES (?,?,?)",[$file_name, $get_extension, $user_id])){
-			echo "exito";
+			echo "success";
 		}
 	}
 }

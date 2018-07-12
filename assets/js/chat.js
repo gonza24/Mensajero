@@ -22,7 +22,7 @@ $(document).ready(function(){
 		}
 	});
 
-	// Envio/Subida de imagenes y archivos
+	// Envío/Subida de imagenes y archivos
 	$("#upload-files").change(function(){
 		var file_name = $("#upload-files").val();
 		if(file_name.length != ""){
@@ -40,12 +40,29 @@ $(document).ready(function(){
 							$(".files-error").removeClass("show-file-error");
 
 						}, 5000);
-					}else if(feedback === "exito"){
-						alert("file/image send");
+					}else if(feedback === "success"){
+						alert("Se envio un archivo/imagen");
 					}
 				}
 			})
 		}
+	});
+
+	//Envío/Subida de emojis
+	$(".emoji-same").click(function() {
+		var emoji = $(this).attr("src"); 
+		$.ajax({
+			url: 'ajax/send_emoji.php',
+			type: 'POST',
+			dataType: 'JSON',
+			data: {'send_emoji': emoji},
+			success: function(feedback){
+				if(feedback.status == "success"){
+					alert("Se envió emoji");
+				}
+			}
+		})
+		
 	});
 
 });
