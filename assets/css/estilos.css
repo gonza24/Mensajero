@@ -317,6 +317,16 @@ body{
 	margin-top: 0.3rem;
 	position: relative;
 	font-size: 1.2rem;
+	box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+}
+
+.left-files{
+	padding: 1rem;
+	width: auto;
+	background: var(--color-white);
+	margin-top: 0.3rem;
+	position: relative;
+	font-size: 1.2rem;
 }
 
 .left-msg::before{
@@ -349,6 +359,10 @@ body{
 	text-align: right;
 }
 
+.right-message-time{
+	margin-right: -1rem;
+}
+
 .right-msg{
 	padding: 1rem;
 	width: auto;
@@ -360,6 +374,19 @@ body{
 	margin-top: 0.3rem;
 	color: var(--color-black);
 	font-size: 1.2rem;
+}
+
+.right-files{
+	padding: 1rem;
+	width: auto;
+	background: var(--color-white);
+	margin-top: 0.3rem;
+	font-size: 1.2rem;
+}
+
+.common-images{
+	width: 11rem;
+	height: auto;
 }
 
 .sender-img{
@@ -631,6 +658,43 @@ body{
 	text-align: center;
 	border-radius: 50%;
 	border: 1px solid var(--color-white);
+}
+
+.all-files{
+	text-decoration: none;
+	color: var(--color-green);
+}
+
+.files-common{
+	font-size: 2.2rem;
+	margin-right: 1rem;
+}
+
+.pdf{
+	color: var(--color-red);
+}
+
+.animated-emoji{
+	width: 5rem;
+	height: auto;
+	animation: emoj 2s infinite;
+}
+
+.word{
+	color: #209EF7;
+}
+
+.excel{
+	color: var(--color-green);
+}
+
+@keyframes emoj{
+	50%{
+		transform: rotate(35deg) scale(1.2);
+	}
+	100%{
+		transform: rotate(-35deg);
+	}
 }
 
 /** MEDIA QUERIES **/
