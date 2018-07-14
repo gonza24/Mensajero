@@ -63,7 +63,8 @@ if(isset($_POST['signup'])){
 
 		move_uploaded_file($img_tmp, "$img_path/$img_name");
 		$status = 0;
-		if($obj->normal_query("INSERT INTO users (name,email,password,image,status) VALUES(?,?,?,?,?)", [$full_name, $email,password_hash($password, PASSWORD_DEFAULT), $img_name,$status])){
+		$clean_status = 0;
+		if($obj->normal_query("INSERT INTO users (name,email,password,image,status, clean_status) VALUES(?,?,?,?,?,?)", [$full_name, $email,password_hash($password, PASSWORD_DEFAULT), $img_name,$status, $clean_status])){
 			
 			$obj->create_session("account_success", "Tu cuenta ha sido creada exitosamente!");
 

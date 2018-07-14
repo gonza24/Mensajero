@@ -65,4 +65,20 @@ $(document).ready(function(){
 		
 	});
 
+	//Mostrar mensajes desde BD
+	function show_messages(){
+		var msg = true;
+		$.ajax({
+			url: 'ajax/show_messages.php',
+			type: 'GET',
+			data: {'message': msg},
+			success: function(feedback){
+				$(".messages").html(feedback);
+			}
+		});
+
+	}
+
+	show_messages();
+
 });

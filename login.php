@@ -30,15 +30,36 @@
 					$user_id = $row->id;
 					$user_name = $row->name;
 					$user_image = $row->image;
+					$clean_status = $row->clean_status;
 
 					if(password_verify($password, $db_password)){
 						$status = 1;
 						$obj->normal_query("UPDATE users SET status = ? WHERE id = ?", [$status,$user_id]);
-						$obj->create_session("user_name", $user_name);
-						$obj->create_session("user_id", $user_id);
-						$obj->create_session("user_image", $user_image);
 
-						header("location:index.php");
+						if($clean_status == 0){
+							if($obj->normal_query("SELECT msg_id FROM messages ORDER BY msg_id DESC LIMIT 1")){
+								$last_row = $obj->single_result();
+								$last_msg_id = $last_row->msg_id + 1;
+
+								if($obj->normal_query("INSERT INTO clean (clean_message_id, clean_user_id) VALUES (?,?)", [$last_msg_id, $user_id])){
+									$update_clean_status = 1;
+									$obj->normal_query("UPDATE users SET clean_status = ?  WHERE id = ?", [$update_clean_status, $user_id]);
+
+									$obj->create_session("user_name", $user_name);
+									$obj->create_session("user_id", $user_id);
+									$obj->create_session("user_image", $user_image);
+									header("location:index.php");
+								}
+							}
+						}else{
+							$obj->create_session("user_name", $user_name);
+							$obj->create_session("user_id", $user_id);
+							$obj->create_session("user_image", $user_image);
+							header("location:index.php");
+						}
+
+
+						
 					}else{
 						$password_error = "Ingresa la contraseña correcta";
 					}
