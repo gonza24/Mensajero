@@ -30,7 +30,7 @@ if(isset($_GET['message'])){
 				$message 	= $informations->message;
 				$msg_type 	= $informations->msg_type;
 				$db_user_id 	= $informations->user_id;
-				$msg_time	= $informations->msg_time;
+				$msg_time	= $obj->time_ago($informations->msg_time);
 
 				if($user_status == 0){
 					$user_online_status = '<span class="offline-icon"></span>';
@@ -47,7 +47,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-msg">
 									'.$message.'
@@ -62,7 +63,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<img src="assets/img/'.$message.'" class="common-images">
@@ -77,7 +79,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<img src="assets/img/'.$message.'" class="common-images">
@@ -92,7 +95,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-arrow-circle-down files-common"></i>'.$message.'</a>
@@ -107,7 +111,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-file-pdf files-common pdf"></i>'.$message.'</a>
@@ -122,7 +127,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<img src="'.$message.'" class="animated-emoji">
@@ -137,7 +143,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-file-word files-common word"></i>'.$message.'</a>
@@ -152,7 +159,8 @@ if(isset($_GET['message'])){
 						<div class="right-messages common-margin">
 							<div class="right-msg-area">
 								<span class="date-time right-time right-message-time">
-									Hace 1 día
+									<span class="send-msg">&#10004;</span>
+									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
 									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-file-excel files-common excel"></i>'.$message.'</a>
@@ -180,7 +188,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-msg">
@@ -204,7 +212,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -228,7 +236,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -252,7 +260,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -276,7 +284,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -300,7 +308,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -324,7 +332,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
@@ -348,7 +356,7 @@ if(isset($_GET['message'])){
 										'.$full_name.'
 									</span><!-- fin sender-name -->
 									<span class="date-time">
-										Hace 1 día
+										'.$msg_time.'
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">

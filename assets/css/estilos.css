@@ -688,6 +688,12 @@ body{
 	color: var(--color-green);
 }
 
+.send-msg{
+	color: var(--color-green);
+	font-size: 1.7rem;
+	margin-right: 7px;
+}
+
 @keyframes emoj{
 	50%{
 		transform: rotate(35deg) scale(1.2);
