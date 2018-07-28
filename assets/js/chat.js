@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
+	
 	$(".chat-form").keypress(function(e){
 		if(e.keyCode == 13){
 			
@@ -14,13 +16,14 @@ $(document).ready(function(){
 						console.log(feedback);
 							if(feedback.status == "success"){
 								$(".chat-form").trigger('reset')
-								alert("El mensaje fue enviado!");
+								show_messages();
+								$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
 							}
 					}
 				})
 			}
 		}
-	});
+	})
 
 	// Envío/Subida de imagenes y archivos
 	$("#upload-files").change(function(){
@@ -41,12 +44,13 @@ $(document).ready(function(){
 
 						}, 5000);
 					}else if(feedback === "success"){
-						alert("Se envio un archivo/imagen");
+						show_messages();
+						$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
 					}
 				}
 			})
 		}
-	});
+	})
 
 	//Envío/Subida de emojis
 	$(".emoji-same").click(function() {
@@ -58,13 +62,17 @@ $(document).ready(function(){
 			data: {'send_emoji': emoji},
 			success: function(feedback){
 				if(feedback.status == "success"){
-					alert("Se envió emoji");
+					show_messages();
+					$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
 				}
 			}
 		})
-		
-	});
+	})
 
+	setInterval(function(){
+		show_messages();
+	}, 3000);
+})
 	//Mostrar mensajes desde BD
 	function show_messages(){
 		var msg = true;
@@ -80,5 +88,3 @@ $(document).ready(function(){
 	}
 
 	show_messages();
-
-});
