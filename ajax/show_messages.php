@@ -17,7 +17,7 @@ if(isset($_GET['message'])){
 		$obj->normal_query("SELECT * FROM messages INNER JOIN users ON messages.user_id = users.id WHERE messages.msg_id BETWEEN $last_msg_id AND $msg_table_id ORDER BY messages.msg_id ASC");
 
 		if($obj->count_rows() == 0){
-			echo "Empieza la conversación!";
+			echo "<p class='clean_message'>Comienza la conversación con tus amigos!</p>";
 		}else{
 			$messages_row = $obj->fetch_all();
 
