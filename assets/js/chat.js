@@ -69,6 +69,21 @@ $(document).ready(function(){
 		})
 	})
 
+	$(".clean").click(function(){
+		var clean = 1;
+		$.ajax({
+			type : 'POST',
+			url : 'ajax/clean.php',
+			data : {"clean" : clean},
+			dataType : 'JSON',
+			function(feedback){
+				if(feedback['status'] == 'clean'){
+					show_messages();
+				}
+			}
+		})
+	})
+
 	setInterval(function(){
 		show_messages();
 		user_status();
