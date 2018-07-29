@@ -55,6 +55,7 @@
 											$obj->create_session("user_name", $user_name);
 											$obj->create_session("user_id", $user_id);
 											$obj->create_session("user_image", $user_image);
+											$obj->create_session("loader", "1");
 											header("location:index.php");
 										}else{
 											$obj->normal_query("UPDATE users_activities SET login_time = ? WHERE user_id = ?", [$login_time, $user_id]);
@@ -62,6 +63,7 @@
 											$obj->create_session("user_name", $user_name);
 											$obj->create_session("user_id", $user_id);
 											$obj->create_session("user_image", $user_image);
+											$obj->create_session("loader", "1");
 											header("location:index.php");
 										}
 									}	
@@ -78,6 +80,7 @@
 											$obj->create_session("user_name", $user_name);
 											$obj->create_session("user_id", $user_id);
 											$obj->create_session("user_image", $user_image);
+											$obj->create_session("loader", "1");
 											header("location:index.php");
 										}else{
 											$obj->normal_query("UPDATE users_activities SET login_time = ? WHERE user_id = ?", [$login_time, $user_id]);
@@ -85,6 +88,7 @@
 											$obj->create_session("user_name", $user_name);
 											$obj->create_session("user_id", $user_id);
 											$obj->create_session("user_image", $user_image);
+											$obj->create_session("loader", "1");
 											header("location:index.php");
 										}
 									}

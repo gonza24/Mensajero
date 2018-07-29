@@ -36,10 +36,9 @@ class base_class extends Db{
 	}
 
 	public function time_ago($db_msg_time){
+		date_default_timezone_set("America/Argentina/Buenos_Aires");
 
 		$db_time = strtotime($db_msg_time);
-
-		date_default_timezone_set("America/Argentina/Buenos_Aires");
 
 		$current_time = time();
 

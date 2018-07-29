@@ -15,14 +15,17 @@
 	<?php include 'components/css.php'; ?>
 </head>
 <body>
-
-	<div class="loader-area">
-		<div class="loader">
-			<div class="loader-item">
+	
+	<?php if(isset($_SESSION['loader'])): ?>
+		<div class="loader-area">
+			<div class="loader">
+				<div class="loader-item">
 				
-			</div><!-- fin loader-item -->
-		</div><!-- fin loader -->
-	</div><!-- fin loader-area -->
+				</div><!-- fin loader-item -->
+			</div><!-- fin loader -->
+		</div><!-- fin loader-area -->
+	<?php endif; ?>
+	<?php unset($_SESSION['loader']); ?>
 
 <!-------------MENSAJE FLASH CAMBIO DE CONTRASEÑA------------>
 	<?php if(isset($_SESSION['password_updated'])): ?>
