@@ -115,7 +115,7 @@ if(isset($_GET['message'])){
 									'.$msg_time.'
 								</span><!-- fin date-time -->
 								<div class="right-files">
-									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-file-pdf files-common pdf"></i>'.$message.'</a>
+									<a href="assets/img/'.$message.'" class="all-files" target="_blank"><i class="fas fa-file-pdf files-common pdf"></i>'.$message.'</a>
 								</div>
 							</div><!-- fin right-msg-area -->
 						</div><!-- fin right-messages -->
@@ -288,7 +288,7 @@ if(isset($_GET['message'])){
 									</span><!-- fin date-time -->
 								</div><!-- fin user-name-date -->
 								<div class="left-files">
-									<a href="assets/img/'.$message.'" class="all-files"><i class="fas fa-file-pdf files-common pdf"></i>'.$message.'</a>
+									<a href="assets/img/'.$message.'" class="all-files" target="_blank"><i class="fas fa-file-pdf files-common pdf"></i>'.$message.'</a>
 								</div><!-- fin left-msg -->
 							</div><!-- fin left-msg-area -->
 						</div><!-- fin left-message -->

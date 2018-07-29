@@ -1,7 +1,4 @@
-$(document).ready(function(){
-
-	$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
-	
+$(document).ready(function(){	
 	$(".chat-form").keypress(function(e){
 		if(e.keyCode == 13){
 			
@@ -133,3 +130,5 @@ function show_messages(){
 }
 
 show_messages();
+
+$(".messages").animate({scrollTop: $(".messages")[0].scrollHeight}, 2000);
