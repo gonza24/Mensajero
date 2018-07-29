@@ -16,6 +16,14 @@
 </head>
 <body>
 
+	<div class="loader-area">
+		<div class="loader">
+			<div class="loader-item">
+				
+			</div><!-- fin loader-item -->
+		</div><!-- fin loader -->
+	</div><!-- fin loader-area -->
+
 <!-------------MENSAJE FLASH CAMBIO DE CONTRASEÑA------------>
 	<?php if(isset($_SESSION['password_updated'])): ?>
 		<div class="flash success-flash">
@@ -73,5 +81,13 @@
 	</div><!-- fin chat-container -->
 
 <?php include 'components/js.php'; ?>
+<script>
+	$(document).ready(function(){
+		$(".loader-area").show();
+		setTimeout(function(){
+			$(".loader-area").hide();
+		},2000)
+	})
+</script>
 </body>
 </html>
