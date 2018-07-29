@@ -45,17 +45,49 @@
 									$update_clean_status = 1;
 									$obj->normal_query("UPDATE users SET clean_status = ?  WHERE id = ?", [$update_clean_status, $user_id]);
 
-									$obj->create_session("user_name", $user_name);
-									$obj->create_session("user_id", $user_id);
-									$obj->create_session("user_image", $user_image);
-									header("location:index.php");
+									$login_time = time();
+
+									if($obj->normal_query("SELECT * FROM users_activities WHERE user_id = ?", [$user_id])){
+										$activity_row = $obj->single_result();
+										if($activity_row == 0){
+											$obj->normal_query("INSERT INTO users_activities(user_id, login_time) VALUES(?,?)", [$user_id, $login_time]);
+
+											$obj->create_session("user_name", $user_name);
+											$obj->create_session("user_id", $user_id);
+											$obj->create_session("user_image", $user_image);
+											header("location:index.php");
+										}else{
+											$obj->normal_query("UPDATE users_activities SET login_time = ? WHERE user_id = ?", [$login_time, $user_id]);
+
+											$obj->create_session("user_name", $user_name);
+											$obj->create_session("user_id", $user_id);
+											$obj->create_session("user_image", $user_image);
+											header("location:index.php");
+										}
+									}	
 								}
 							}
 						}else{
-							$obj->create_session("user_name", $user_name);
-							$obj->create_session("user_id", $user_id);
-							$obj->create_session("user_image", $user_image);
-							header("location:index.php");
+							$login_time = time();
+
+									if($obj->normal_query("SELECT * FROM users_activities WHERE user_id = ?", [$user_id])){
+										$activity_row = $obj->single_result();
+										if($activity_row == 0){
+											$obj->normal_query("INSERT INTO users_activities(user_id, login_time) VALUES(?,?)", [$user_id, $login_time]);
+
+											$obj->create_session("user_name", $user_name);
+											$obj->create_session("user_id", $user_id);
+											$obj->create_session("user_image", $user_image);
+											header("location:index.php");
+										}else{
+											$obj->normal_query("UPDATE users_activities SET login_time = ? WHERE user_id = ?", [$login_time, $user_id]);
+
+											$obj->create_session("user_name", $user_name);
+											$obj->create_session("user_id", $user_id);
+											$obj->create_session("user_image", $user_image);
+											header("location:index.php");
+										}
+									}
 						}
 
 

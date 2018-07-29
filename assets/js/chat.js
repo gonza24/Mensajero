@@ -71,20 +71,50 @@ $(document).ready(function(){
 
 	setInterval(function(){
 		show_messages();
+		user_status();
+		online_users();
 	}, 3000);
 })
-	//Mostrar mensajes desde BD
-	function show_messages(){
-		var msg = true;
-		$.ajax({
-			url: 'ajax/show_messages.php',
-			type: 'GET',
-			data: {'message': msg},
-			success: function(feedback){
-				$(".messages").html(feedback);
-			}
-		});
 
-	}
+// Mostrar usuarios online+
+function online_users(){
+	$.ajax({
+		type : 'GET',
+		url : 'ajax/online_users.php',
+		dataType : 'JSON',
+		success : function(feedback){
+			$(".online_users").html(feedback['users']);
+		}
+	})
+}
 
-	show_messages();
+// Para controlar el tiempo de logueo 
+function user_status(){
+	$.ajax({
+		type : 'GET',
+		url : 'ajax/users_status.php',
+		dataType : 'JSON',
+		 success : function(feedback){
+		 	if(feedback['status'] == "href"){
+		 		window.location = "login.php";
+		 	}
+		 }
+	})
+}
+
+
+//Mostrar mensajes desde BD
+function show_messages(){
+	var msg = true;
+	$.ajax({
+		url: 'ajax/show_messages.php',
+		type: 'GET',
+		data: {'message': msg},
+		success: function(feedback){
+			$(".messages").html(feedback);
+		}
+	});
+
+}
+
+show_messages();
